@@ -118,5 +118,13 @@ void Game::CheckCollision()
 		ball.y_velocity *= -1;
 	}
 
+	if (bricks.size() == 0)
+	{
+		ball.x_velocity = 0;
+
+		ball.y_velocity = 0;
+
+		std::cout << "You Win! Press 'R' to play again.\n";
+	}
 	// TODO #7 - If ball touches bottom of window, pause ball and display (render) defeat text with R to reset
 }
